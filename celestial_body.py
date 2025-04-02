@@ -9,15 +9,15 @@ class CelestialBody:
         
         Args:
             mass (float): Mass of the body in kg
-            position (np.array): 2D position vector [x, y]
-            velocity (np.array): 2D velocity vector [vx, vy]
+            position (np.array): 3D position vector [x, y, z]
+            velocity (np.array): 3D velocity vector [vx, vy, vz]
             radius (float): Radius of the body for visualization
             color (tuple): RGB color tuple for visualization
         """
         self.mass = mass
         self.position = np.array(position, dtype=float)
         self.velocity = np.array(velocity, dtype=float)
-        self.acceleration = np.zeros(2)
+        self.acceleration = np.zeros(3)
         self.radius = radius
         self.color = color
         self.trail = []  # Store previous positions for trail
@@ -58,7 +58,7 @@ class CelestialBody:
             force = self.calculate_force(center_body, scale, use_constant_acceleration)
             self.acceleration = force / self.mass  # a = F/m
         else:
-            self.acceleration = np.zeros(2)  # Central body doesn't move
+            self.acceleration = np.zeros(3)  # Central body doesn't move
     
     def update_position(self, dt):
         """Update position and velocity using semi-implicit Euler method for better stability."""
@@ -77,5 +77,5 @@ class CelestialBody:
         """Reset the body to its initial state."""
         self.position = self.initial_position.copy()
         self.velocity = self.initial_velocity.copy()
-        self.acceleration = np.zeros(2)
+        self.acceleration = np.zeros(3)
         self.trail = [] 

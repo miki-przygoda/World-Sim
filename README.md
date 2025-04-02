@@ -1,6 +1,6 @@
 # 🌌 Celestial Body Simulator (Pygame)
 
-This project is a real-time simulator of gravitational interactions between celestial bodies, built with **Python**, **Pygame**, and **NumPy**.
+This project is a real-time simulator of gravitational interactions between celestial bodies, built with **Python**, **Pygame**, **NumPy** and **PyOpenGL**
 
 Originally created as a personal project to explore orbital dynamics and interactive physics simulation, it models how planets, stars, and other objects attract each other using **Newtonian gravitational laws** — complete with custom rendering and live control features.
 
@@ -13,6 +13,7 @@ Originally created as a personal project to explore orbital dynamics and interac
 - Full control to pause/resume, interact, and reset - in game
 - Adjustable parameters for mass, position, and velocity - code
 - Shows oribital period - calculated using Keplers Law
+- Now in 3D
 
 ---
 
@@ -21,6 +22,7 @@ Originally created as a personal project to explore orbital dynamics and interac
 - 🎮 `pygame` – for rendering and interaction
 - 🧠 `numpy` – for numerical physics calculations
 - 📈 `matplotlib` (future use) – for trajectory or energy graphs
+- 🪩 `PyOpenGL` - for making it 3D
 
 ---
 
